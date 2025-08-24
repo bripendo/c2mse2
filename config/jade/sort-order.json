@@ -132,5 +132,7 @@
   "projectexpansion:provider": null,
   "replication:matter_tank": null,
   "storagedrawers:main": null,
-  "tombstone:graves": null
+  "tombstone:decorative_graves": null,
+  "tombstone:graves": null,
+  "tombstone:player_graves": null
 }
