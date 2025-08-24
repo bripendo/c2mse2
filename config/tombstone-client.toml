@@ -75,4 +75,6 @@
 	equip_shield_in_priority = false
 	#Sorts the inventory by filling the last slots first [false/true|default:false]
 	reverse_inventory_sorting = false
+	#Scales Tombstone guiscreens to be larger as possible [false/true|default:true]
+	scale_guiscreens = true
 

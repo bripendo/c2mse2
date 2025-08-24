@@ -67,11 +67,12 @@
     "goggles.detailed": false,
     "placard": true
   },
-  "tombstone": {
-    "graves": true
-  },
   "entangled": {
     "entangled_block_component": true
+  },
+  "tombstone": {
+    "decorative_graves": true,
+    "player_graves": true
   },
   "exdeorum": {
     "infested_leaves": true,
