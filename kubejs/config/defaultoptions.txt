@@ -1,0 +1,1 @@
+resourcePacks:["vanilla","mod_resources","Moonlight Mods Dynamic Assets","file/Lopy-Create-Pipez.zip","file/Clearate_v1.zip","file/Mekanism CTM-Fusion 1.0.zip","file/MekE CTM-Fusion 1.0.zip"]
