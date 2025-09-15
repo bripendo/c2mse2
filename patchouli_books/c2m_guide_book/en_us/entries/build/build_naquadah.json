@@ -1,0 +1,38 @@
+{
+    "name": "Naquadah Reactor",
+    "icon": "mekanism_extras:naquadah_reactor_controller",
+    "category": "patchouli:build",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Here you can find an example visualisation of how to build \"$(1)Naquadah Reactor$(reset)\". This multiblock will allow you to produce huge amounts of energy and polonium.$(br)Note that ports and Laser Focus Matrix can replace any Lead Coated Glass."
+        },
+        {
+            "type": "patchouli:multiblock",
+            "name": "Naq. Reactor",
+            "multiblock": {
+                "pattern": [
+                    [ "   CCC   ", " CCGGGCC ", " CGGGGGC ", "CGGGGGGGC", "CGGGLGGGC", "CGGGGGGGC", " CGGGGGC ", " CCGGGCC ", "   CCC   " ],
+                    [ " CCGGGCC ", "C       C", "C       C", "G       G", "G       G", "G       G", "C       C", "C       C", " CCGGGCC " ],
+                    [ " CGGGGGC ", "C       C", "G       G", "G       G", "G       G", "G       G", "G       G", "C       C", " CGGGGGC " ],
+                    [ "CGGGGGGGC", "G       G", "G       G", "G       G", "G       G", "G       G", "G       G", "G       G", "CGGGGGGGC" ],
+                    [ "CGGGTGGGC", "G       G", "G       G", "G       G", "P       P", "G       G", "G       G", "G       G", "CGGGPGGGC" ],
+                    [ "CGGGGGGGC", "G       G", "G       G", "G       G", "G       G", "G       G", "G       G", "G       G", "CGGGGGGGC" ],
+                    [ " CGGGGGC ", "C       C", "G       G", "G       G", "G       G", "G       G", "G       G", "C       C", " CGGGGGC " ],
+                    [ " CCGGGCC ", "C       C", "C       C", "G       G", "G       G", "G       G", "C       C", "C       C", " CCGGGCC " ],
+                    [ "   CCC   ", " CCGGGCC ", " CGGGGGC ", "CGGGGGGGC", "CGGG0GGGC", "CGGGGGGGC", " CGGGGGC ", " CCGGGCC ", "   CCC   " ]
+                ],
+                "mapping": {
+                    "C": "mekanism_extras:naquadah_reactor_casing",
+                    "G": "mekanism_extras:lead_coated_glass",
+                    "P": "mekanism_extras:naquadah_reactor_port",
+                    "L": "mekanism_extras:naquadah_reactor_controller",
+                    "T": "mekanism_extras:lead_coated_laser_focus_matrix",
+                    "0": "mekanism_extras:naquadah_reactor_port"
+                }
+            },
+            "enable_visualize": true,
+            "text": "Make sure that it doesn't cross any chunk borders ($(l)F3 + G$(reset) to see them)."
+        }
+    ]
+}
