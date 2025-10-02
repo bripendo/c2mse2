@@ -293,4 +293,6 @@ ItemEvents.tooltip(event => {
     PowahBatteries.forEach((item) => {
         event.add(item, `§7Press §6Shift + Right Click §7to toggle §6Inventory Charging §7mode`)
     })
+
+    event.add('hostilenetworks:sim_chamber', 'Note: This machine will NOT upgrade your Data Models!')
 })
