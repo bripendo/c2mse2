@@ -483,6 +483,7 @@
 		}
 		{
 			dependencies: ["6908E051E7215802"]
+			disable_toast: true
 			id: "6D4AC2E6D0ADFEDB"
 			tasks: [{
 				id: "2A66D5F2997C08F3"
@@ -494,6 +495,7 @@
 		}
 		{
 			dependencies: ["6D4AC2E6D0ADFEDB"]
+			disable_toast: true
 			id: "6C3A583E10B3B979"
 			tasks: [{
 				id: "10F1CA451341AD71"
