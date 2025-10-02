@@ -62,4 +62,7 @@ ServerEvents.recipes(event => {
 		D: KJ('engineering_processor_wafer'),
 		E: CP('fluix_1'),
 	})
+	
+	//MEGA item storage cells
+	event.replaceInput({ id: /megacells:cells\/standard\/item_storage_cell_/ }, MC("iron_ingot"), F("#ingots/sky_steel"))
 })
