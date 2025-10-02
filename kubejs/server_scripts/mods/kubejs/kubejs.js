@@ -964,18 +964,24 @@ ServerEvents.recipes((event) => {
 	], 2048)
 
 	meltNumber(KJ("calculation_mechanism"), KJ("raw_logic"), 200)
-	meltNumber(KJ("zero"), KJ("number_0"), 25)
-	meltNumber(KJ("one"), KJ("number_1"), 25)
-	meltNumber(KJ("two"), KJ("number_2"), 25)
-	meltNumber(KJ("three"), KJ("number_3"), 25)
-	meltNumber(KJ("four"), KJ("number_4"), 25)
-	meltNumber(KJ("five"), KJ("number_5"), 25)
-	meltNumber(KJ("six"), KJ("number_6"), 25)
-	meltNumber(KJ("seven"), KJ("number_7"), 25)
-	meltNumber(KJ("eight"), KJ("number_8"), 25)
-	meltNumber(KJ("nine"), KJ("number_9"), 25)
+	customRecipes.mekanism.oxidizing(event, KJ("calculation_mechanism"), KJ("gasified_raw_logic"), 400)
+	customRecipes.mekanism.condensentrating(event, KJ(`raw_logic`), 1, KJ(`gasified_raw_logic`), 1)
 	meltNumber(KJ("true"), KJ("truthy"), 25)
+	customRecipes.mekanism.oxidizing(event, KJ("true"), KJ("gasified_truth"), 50)
+	customRecipes.mekanism.condensentrating(event, KJ(`truthy`), 1, KJ(`gasified_truth`), 1)
 	meltNumber(KJ("false"), KJ("falsy"), 25)
+	customRecipes.mekanism.oxidizing(event, KJ("false"), KJ("gasified_falsehood"), 50)
+	customRecipes.mekanism.condensentrating(event, KJ(`falsy`), 1, KJ(`gasified_falsehood`), 1)
+
+	let NumberIDNames = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+	for (let i = 0; i < NumberIDNames.length; i++) {
+		meltNumber(KJ(NumberIDNames[i]), KJ(`number_${i}`), 25)
+		customRecipes.mekanism.oxidizing(event, KJ(NumberIDNames[i]), KJ(`gasified_logic_${i}`), 50)
+		customRecipes.mekanism.condensentrating(event, KJ(`number_${i}`), 1, KJ(`gasified_logic_${i}`), 1)
+	}
+
+
+
 
 	event.recipes.tconstruct.casting_basin(KJ("computation_matrix"), Fluid.of(KJ("matrix"), 50), KJ("crystal_matrix_ingot"), false, 20)
 	event.custom({

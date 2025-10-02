@@ -107,6 +107,7 @@
 		}
 		{
 			dependencies: ["311416D716462A51"]
+			description: ["[ \"If you are looking for a way to make enough Polonium for antimatter, don't build a city of Fission Reactors. Look into \", { \"text\": \"Naquadah Reactor\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"492BDF43EA2D8E82\" } }, \".\" ]"]
 			icon: "mekanism:antiprotonic_nucleosynthesizer"
 			id: "663540E7D7B057E3"
 			size: 1.0d

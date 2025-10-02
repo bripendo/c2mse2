@@ -1,4 +1,5 @@
 {
+	autofocus_id: "6C3A583E10B3B979"
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	disable_toast: true
@@ -343,9 +344,15 @@
 			y: -0.5d
 		}
 		{
+			description: [
+				"[ \"Completing this quest will unlock a \", { \"text\": \"secret questline\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"49D6669460B9A32F\" } }, \" to show you how to make this bad boy generate heaps of Polonium for your Antimatter.\" ]"
+				""
+				"Check out your &6C2MSE: Multiblock Guidebook&r to learn how to build your first (and any following) Naquadah Reactor!"
+			]
 			disable_toast: true
 			icon: "mekanism_extras:naquadah_reactor_controller"
 			id: "492BDF43EA2D8E82"
+			subtitle: "Not only energy!"
 			tasks: [
 				{
 					disable_toast: true
@@ -476,6 +483,7 @@
 		}
 		{
 			dependencies: ["6908E051E7215802"]
+			disable_toast: true
 			id: "6D4AC2E6D0ADFEDB"
 			tasks: [{
 				id: "2A66D5F2997C08F3"
@@ -487,6 +495,7 @@
 		}
 		{
 			dependencies: ["6D4AC2E6D0ADFEDB"]
+			disable_toast: true
 			id: "6C3A583E10B3B979"
 			tasks: [{
 				id: "10F1CA451341AD71"
@@ -926,6 +935,235 @@
 			}]
 			x: -13.25d
 			y: 3.75d
+		}
+		{
+			dependencies: ["492BDF43EA2D8E82"]
+			description: ["[ \"This questline is unlocked by obtaining all the materials needed to build a \", { \"text\": \"Naquadah Reactor\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"492BDF43EA2D8E82\" } }, \".\" ]"]
+			disable_toast: true
+			hide_until_deps_complete: true
+			id: "49D6669460B9A32F"
+			optional: true
+			shape: "circle"
+			tasks: [{
+				id: "20ABAA26C5E014EA"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "cookingforblockheads:sink"
+							}
+							{
+								Count: 1b
+								id: "itemfilters:strong_nbt"
+								tag: {
+									value: {
+										mekData: {
+											FluidTanks: [{
+												Tank: 0b
+												stored: {
+													Amount: 2147483647
+													FluidName: "minecraft:water"
+												}
+											}]
+										}
+									}
+								}
+							}
+							{
+								Count: 1b
+								id: "itemfilters:strong_nbt"
+								tag: {
+									value: {
+										record: {
+											"#c": "ae2:f"
+											id: "minecraft:water"
+										}
+									}
+								}
+							}
+						]
+					}
+				}
+				match_nbt: true
+				title: "Any Infinite Water"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["49D6669460B9A32F"]
+			description: ["Naquadah Reactor when supplied with &l&oA LOT&r of Water will produce heaps of &2Polonium Containing Steam&r in a similar manner to Fusion Reactor producing normal Steam."]
+			disable_toast: true
+			hide_until_deps_visible: true
+			id: "5EF6531D65D3135B"
+			optional: true
+			shape: "circle"
+			tasks: [{
+				id: "61296F31F6DAB04A"
+				item: "mekanism_extras:naquadah_reactor_controller"
+				type: "item"
+			}]
+			title: "Naquadah Reactor (Watercooled)"
+			x: 12.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["5EF6531D65D3135B"]
+			description: [
+				"An incredibly slow, painful way to make it efficient by any means."
+				"But all the Polonium Steam is converted to Polonium Solution."
+			]
+			disable_toast: true
+			hide_until_deps_visible: true
+			id: "0A4C26E6D3F1DA9B"
+			optional: true
+			shape: "circle"
+			tasks: [{
+				id: "2E0E4603CC165D63"
+				item: "mekanism:rotary_condensentrator"
+				type: "item"
+			}]
+			title: "Condensentrating"
+			x: 14.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5EF6531D65D3135B"]
+			description: [
+				"Maybe it's costly, but if an Indeustrial Turbine is built properly, it can be as eeficient as &6SIX THOUSAND&r Rotary Condensentrators."
+				"This, and you get about a dozen bonus MRF (Mega RF = 1000000RF)."
+				""
+				"With that efficiency comes a little cost, as some Polonium Containing Steam is lost in the process."
+				"Don't worry though, the Naquadah reactor generates MASSIVE amounts of the Polonium Steam (millions of mB), you aren't going to notice the loss."
+				""
+				"DISCLAIMER: All values mentioned here are per game tick!"
+			]
+			disable_toast: true
+			hide_until_deps_visible: true
+			id: "2DA57682F4C7A1DA"
+			optional: true
+			shape: "circle"
+			subtitle: "It can work with Polonium Steam too!"
+			tasks: [{
+				id: "75E4EBCB743EB096"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "mekanismgenerators:turbine_casing"
+							}
+							{
+								Count: 1b
+								id: "mekanismgenerators:turbine_valve"
+							}
+							{
+								Count: 1b
+								id: "mekanismgenerators:turbine_vent"
+							}
+							{
+								Count: 1b
+								id: "mekanismgenerators:turbine_blade"
+							}
+							{
+								Count: 1b
+								id: "mekanismgenerators:turbine_rotor"
+							}
+							{
+								Count: 1b
+								id: "mekanism:pressure_disperser"
+							}
+							{
+								Count: 1b
+								id: "mekanismgenerators:rotational_complex"
+							}
+							{
+								Count: 1b
+								id: "mekanismgenerators:electromagnetic_coil"
+							}
+							{
+								Count: 1b
+								id: "mekanismgenerators:saturating_condenser"
+							}
+							{
+								Count: 1b
+								id: "mekanism:structural_glass"
+							}
+						]
+					}
+				}
+				title: "Any Industial Turbine component"
+				type: "item"
+			}]
+			title: "Industial Turbine"
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2DA57682F4C7A1DA"
+				"0A4C26E6D3F1DA9B"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"Now that you have your Polonium Containing Solution, you need to pour it into your Thermal Evaporation Plants."
+				"It'll turn into liquid &2Polonium-208&r."
+			]
+			disable_toast: true
+			hide_until_deps_visible: true
+			id: "3D60C8DF2AA6B8D0"
+			optional: true
+			shape: "circle"
+			tasks: [{
+				id: "6CDDE89CF80C547B"
+				item: "mekanism:thermal_evaporation_controller"
+				type: "item"
+			}]
+			title: "Thermal Evaporation"
+			x: 15.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["3D60C8DF2AA6B8D0"]
+			description: [
+				"With fluid &2Polonium-208&r you can't do much, except for Decondensentrating it into its gaseous form."
+				"We're almost there!"
+			]
+			disable_toast: true
+			hide_until_deps_visible: true
+			id: "234144261B4AFB06"
+			optional: true
+			shape: "circle"
+			tasks: [{
+				id: "691B59EE6115E0F5"
+				item: "mekanism:rotary_condensentrator"
+				type: "item"
+			}]
+			title: "Decondensentrating"
+			x: 17.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["234144261B4AFB06"]
+			description: ["Now that you have your Polonium-208 gas, you can use a &6Solar Neutron Activator&r to turn it into SPS-ready Polonium!"]
+			disable_toast: true
+			hide_until_deps_visible: true
+			id: "484EFC04046F29E6"
+			optional: true
+			shape: "circle"
+			tasks: [{
+				id: "59BFDC06AA261659"
+				item: "mekanism:solar_neutron_activator"
+				type: "item"
+			}]
+			x: 18.5d
+			y: -0.5d
 		}
 	]
 	title: "Energy Generation"

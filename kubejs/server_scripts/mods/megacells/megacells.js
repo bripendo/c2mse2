@@ -51,9 +51,9 @@ ServerEvents.recipes(event => {
 	])
 	event.recipes.extendedcrafting.shaped_table(MGC('mega_crafting_accelerator'), [
 		'CEBEC',
-		'EDDDE',
-		'BDADB',
-		'EDDDE',
+		'EDFDE',
+		'BFAFB',
+		'EDFDE',
 		'CEBEC',
 	], {
 		A: MGC('mega_crafting_unit'),
@@ -61,5 +61,9 @@ ServerEvents.recipes(event => {
 		C: CP('iron_2'),
 		D: KJ('engineering_processor_wafer'),
 		E: CP('fluix_1'),
+		F: AE2('crafting_accelerator'),
 	})
+	
+	//MEGA item storage cells
+	event.replaceInput({ id: /megacells:cells\/standard\/item_storage_cell_/ }, MC("iron_ingot"), F("#ingots/sky_steel"))
 })

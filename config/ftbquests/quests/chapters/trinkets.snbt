@@ -10,7 +10,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["&6Angel Rings&r provide you with creative flight, but if you equip or unequip anything, the flight gets &4cancelled&r."]
+			description: ["&6Angel Rings&r provides creative flight"]
 			disable_toast: true
 			icon: "miniutilities:angel_ring"
 			id: "1E8B2CC5B207AC5C"

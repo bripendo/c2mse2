@@ -344,6 +344,12 @@
 		}
 		{
 			dependencies: ["66D4449924C2F39C"]
+			description: [
+				"It's found near Bedrock layer in the Mining Dimension."
+				"Pay attention as it's texture is nearly identical as Bedrock."
+				""
+				"...alternatively you can use the &6Digital Miner&r to obtain the ore."
+			]
 			id: "1DDC675114F3E1BF"
 			shape: "rsquare"
 			tasks: [{
