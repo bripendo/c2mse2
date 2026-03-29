@@ -1,9 +1,21 @@
 {
   "loader": "fusion:model",
-  "type": "connecting",
+  "type": "fusion:connecting",
   "connections": [
     {
-        "type": "is_same_block"
+      "type": "and",
+      "predicates": [
+        {
+          "type": "is_same_block"
+        },
+        {
+          "type": "not",
+          "predicate": {
+            "type": "match_block_in_front",
+            "block": "kubejs:electric_casing"
+          }
+        }
+      ]
     }
   ],
   "parent": "block/cube_all",
